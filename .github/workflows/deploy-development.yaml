@@ -9,11 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: .
       - run: npm install
-        working-directory: .
       - run: npx parcel build src/*.html --dist-dir dist
-        working-directory: .
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

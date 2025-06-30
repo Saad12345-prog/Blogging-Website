@@ -8,24 +8,25 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: .
       - name: Install dependencies
         run: npm install
-        working-directory: .  # 👈 correct directory
       - name: Lint HTML
         run: npx htmlhint "**/*.html"
-        working-directory: .
       - name: Lint CSS
         run: npx stylelint "**/*.css"
-        working-directory: .
 
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: .
       - name: Install dependencies
         run: npm install
-        working-directory: .
       - name: Build Project
         run: npx parcel build src/*.html --dist-dir build
-        working-directory: .
