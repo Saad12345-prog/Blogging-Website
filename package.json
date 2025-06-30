@@ -1,0 +1,25 @@
+{
+  "name": "blogging-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saad12345-prog/Blogging-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saad12345-prog/Blogging-Website/issues"
+  },
+  "homepage": "https://github.com/Saad12345-prog/Blogging-Website#readme",
+  "description": "",
+  "devDependencies": {
+    "htmlhint": "^1.6.3",
+    "parcel": "^2.15.4",
+    "stylelint": "^16.21.0"
+  }
+}
